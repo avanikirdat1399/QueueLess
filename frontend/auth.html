@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QueueLess | Student Authentication</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="bg-slate-950 text-white min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center px-8 py-5 border-b border-slate-800">
+
+        <a href="/" class="text-2xl font-bold text-blue-400">
+            QueueLess<span class="text-white">.</span>
+        </a>
+
+        <a href="/" class="text-slate-300 hover:text-blue-400">
+            Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- Authentication Section -->
+    <section class="min-h-[85vh] flex justify-center items-center px-5 py-12">
+
+        <div class="w-full max-w-md bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl">
+
+            <!-- Heading -->
+            <div class="text-center mb-8">
+
+                <h1 class="text-3xl font-bold">
+                    Welcome to <span class="text-blue-400">QueueLess</span>
+                </h1>
+
+                <p class="text-slate-400 mt-3">
+                    Login or create your student account
+                </p>
+
+            </div>
+
+
+            <!-- Login / Register Tabs -->
+            <div class="grid grid-cols-2 bg-slate-800 rounded-lg p-1 mb-7">
+
+                <button
+                    id="login-tab"
+                    onclick="showLogin()"
+                    class="bg-blue-600 rounded-lg py-2 font-semibold">
+                    Login
+                </button>
+
+                <button
+                    id="register-tab"
+                    onclick="showRegister()"
+                    class="text-slate-300 rounded-lg py-2 font-semibold">
+                    Register
+                </button>
+
+            </div>
+
+
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-5">
+
+                <div>
+                    <label class="block text-sm mb-2">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="login-email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2">Password</label>
+
+                    <input
+                        type="password"
+                        id="login-password"
+                        placeholder="Enter your password"
+                        required
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500">
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-semibold">
+                    Login to QueueLess
+                </button>
+
+            </form>
+
+
+            <!-- Registration Form -->
+            <form id="register-form" class="space-y-5 hidden">
+
+                <div>
+                    <label class="block text-sm mb-2">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="register-name"
+                        placeholder="Enter your full name"
+                        required
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="register-email"
+                        placeholder="Enter your email"
+                        required
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500">
+                </div>
+
+                <div>
+                    <label class="block text-sm mb-2">Password</label>
+
+                    <input
+                        type="password"
+                        id="register-password"
+                        placeholder="Minimum 8 characters"
+                        minlength="8"
+                        required
+                        class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 outline-none focus:border-blue-500">
+                </div>
+
+                <button
+                    type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-semibold">
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <!-- Response Message -->
+            <p id="auth-message"
+               class="text-center text-sm mt-6"
+               role="status"
+               aria-live="polite">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Authentication JavaScript -->
+    <script src="/static/js/auth.js"></script>
+
+</body>
+
+</html>

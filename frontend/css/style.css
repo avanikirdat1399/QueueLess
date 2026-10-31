@@ -1,0 +1,73 @@
+
+/* General styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Statistics cards */
+
+.stat-card {
+    background: #1e293b;
+    padding: 25px;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+/* Service cards */
+
+.service-card {
+    background: #1e293b;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.12);
+}
+
+/* Service buttons */
+
+.service-button {
+    background: #2563eb;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 9px;
+    margin-top: 25px;
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.service-button:hover {
+    background: #1d4ed8;
+}
+
+/* Process step circles */
+
+.step-number {
+    background: #2563eb;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 25px;
+    font-weight: bold;
+}
